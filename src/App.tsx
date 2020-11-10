@@ -1,4 +1,6 @@
-import React, { useEffect, FormEvent, useState } from "react";
+import "leaflet/dist/leaflet.css";
+
+import React, { FormEvent, useState } from "react";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 import Leaflet from "leaflet";
 import { v4 as uuidv4 } from "uuid";
@@ -72,7 +74,6 @@ function App() {
   };
 
   const handleChangeSelect = (event: any) => {
-    console.log("changed", event);
     setPosition({
       longitude: event.coords[0],
       latitude: event.coords[1],
